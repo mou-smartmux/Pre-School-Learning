@@ -1,4 +1,4 @@
-package com.mou.pre_school_learning;
+package com.mou.preschoollearning;
 
 import org.junit.Test;
 
