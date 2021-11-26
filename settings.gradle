@@ -1,0 +1,2 @@
+rootProject.name = "Pre-School-Learning"
+include ':app'
