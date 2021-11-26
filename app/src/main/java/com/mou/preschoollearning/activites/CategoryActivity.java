@@ -6,7 +6,7 @@ import android.os.Bundle;
 
 import com.mou.preschoollearning.R;
 
-public class CatagoryActivity extends AppCompatActivity {
+public class CategoryActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
