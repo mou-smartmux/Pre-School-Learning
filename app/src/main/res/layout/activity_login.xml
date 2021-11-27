@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:orientation="vertical"
+    android:background="#fbe9e7">
+
+    <TextView
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:text="Pre-School-Learning"
+        android:gravity="center"
+        android:textSize="32sp"
+        android:layout_marginTop="50dp"
+        android:textStyle="bold"
+        android:textColor="#ff8a9b"
+
+        />
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="20dp">
+
+        <ImageView
+            android:id="@+id/proIcon"
+            android:layout_width="60dp"
+            android:layout_height="70dp"
+            android:layout_margin="10dp"
+            android:src="@drawable/profile_icon" />
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/proIcon"
+            android:layout_toRightOf="@id/proIcon"
+            android:hint="Enter your name"
+
+            />
+
+        <ImageView
+            android:id="@+id/password"
+            android:layout_width="60dp"
+            android:layout_height="70dp"
+            android:layout_below="@+id/proIcon"
+            android:src="@drawable/password_icon"
+            android:layout_margin="10dp"/>
+
+        <EditText
+            android:id="@+id/editTextPassword"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/password"
+            android:layout_toRightOf="@id/password"
+            android:hint="Enter your password"
+
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="10dp"
+            android:textSize="20sp"
+            android:text="Forgot Password?"
+            android:textColor="@color/black"
+            android:layout_below="@+id/editTextPassword"
+
+            />
+
+
+    </RelativeLayout>
+
+    <Button
+        android:id="@+id/btnlogin"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="60dp"
+        android:layout_marginTop="50dp"
+        android:layout_marginRight="60dp"
+        android:background="@drawable/backgroundlogin"
+        android:hint="Go"
+        android:textColor="@color/white"
+        android:textSize="30dp"
+        android:textStyle="bold"
+        android:backgroundTint="#e89f49"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="10dp"
+        android:textSize="20sp"
+        android:text="Don't have account yet?"
+        android:textColor="@color/black"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="10dp"
+        android:textSize="20sp"
+        android:text="Sign up"
+        android:textColor="#ff8a9b"
+        />
+
+
+
+</LinearLayout>
+
+

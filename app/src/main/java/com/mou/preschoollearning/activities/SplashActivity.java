@@ -1,4 +1,4 @@
-package com.mou.preschoollearning.activites;
+package com.mou.preschoollearning.activities;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -8,6 +8,7 @@ import android.os.Handler;
 import android.os.Looper;
 
 import com.mou.preschoollearning.R;
+import com.mou.preschoollearning.activites.CategoryActivity;
 
 public class SplashActivity extends AppCompatActivity {
 
