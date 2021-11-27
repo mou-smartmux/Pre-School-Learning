@@ -82,7 +82,7 @@
         android:layout_marginLeft="60dp"
         android:layout_marginTop="50dp"
         android:layout_marginRight="60dp"
-        android:background="@drawable/backgroundlogin"
+        android:background="@drawable/background_go"
         android:hint="Go"
         android:textColor="@color/white"
         android:textSize="30dp"
