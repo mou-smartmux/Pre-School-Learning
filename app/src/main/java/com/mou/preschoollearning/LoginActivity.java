@@ -37,7 +37,11 @@ public class LoginActivity extends AppCompatActivity {
 
         bounce(layoutContainer);
         slideDown(imgLogo);
-        wobble(btnGo);
+        //wobble(btnGo);
+        btnGo.animate()
+                .translationY(50)
+                .setDuration(700)
+                .start();
     }
 
     public void bounce(View view){

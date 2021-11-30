@@ -10,12 +10,12 @@
     <ImageView
         android:id="@+id/imgLogo"
         android:layout_width="80dp"
-        android:layout_height="80dp"
+        android:layout_height="75dp"
         android:layout_above="@+id/txtTitle"
         android:layout_centerHorizontal="true"
         android:background="@drawable/shape_round"
         android:paddingHorizontal="2dp"
-        android:paddingTop="8dp"
+        android:paddingTop="10dp"
         android:src="@drawable/student" />
 
     <TextView
