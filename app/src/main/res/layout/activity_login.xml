@@ -1,77 +1,97 @@
 <?xml version="1.0" encoding="utf-8"?>
-
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity"
-    android:orientation="vertical"
-    android:background="#fbe9e7">
+    android:background="#fbe9e7"
+    tools:context=".MainActivity">
+
+    <ImageView
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_above="@+id/txtTitle"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/shape_round"
+        android:paddingHorizontal="2dp"
+        android:paddingTop="8dp"
+        android:src="@drawable/student" />
 
     <TextView
-        android:layout_height="wrap_content"
+        android:id="@+id/txtTitle"
         android:layout_width="match_parent"
-        android:text="Pre-School-Learning"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/layoutContainer"
+        android:layout_marginBottom="40dp"
+        android:fontFamily="@font/pacifico"
         android:gravity="center"
+        android:text="Pre-School-Learning"
+        android:textColor="#F67C8E"
         android:textSize="32sp"
-        android:layout_marginTop="50dp"
-        android:textStyle="bold"
-        android:textColor="#ff8a9b"
-
-        />
-
+        android:textStyle="bold" />
 
     <RelativeLayout
+        android:id="@+id/layoutContainer"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:padding="20dp">
+        android:layout_centerInParent="true"
+        android:paddingHorizontal="40dp">
 
         <ImageView
             android:id="@+id/proIcon"
-            android:layout_width="60dp"
-            android:layout_height="70dp"
-            android:layout_margin="10dp"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginBottom="10dp"
             android:src="@drawable/profile_icon" />
 
         <EditText
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="50dp"
             android:layout_alignBottom="@+id/proIcon"
             android:layout_toRightOf="@id/proIcon"
+            android:background="@drawable/background_go"
+            android:fontFamily="@font/outfit"
             android:hint="Enter your name"
-
-            />
+            android:paddingStart="20dp"
+            android:textSize="14sp"
+            android:textStyle="bold"/>
 
         <ImageView
             android:id="@+id/password"
-            android:layout_width="60dp"
-            android:layout_height="70dp"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
             android:layout_below="@+id/proIcon"
-            android:src="@drawable/password_icon"
-            android:layout_margin="10dp"/>
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginBottom="10dp"
+            android:src="@drawable/password_icon" />
 
         <EditText
             android:id="@+id/editTextPassword"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="50dp"
             android:layout_alignBottom="@+id/password"
             android:layout_toRightOf="@id/password"
+            android:background="@drawable/background_go"
+            android:fontFamily="@font/outfit"
             android:hint="Enter your password"
+            android:paddingStart="20dp"
+            android:inputType="textPassword"
+            android:textSize="14sp"
+            android:textStyle="bold" />
 
-            />
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:layout_marginTop="10dp"
-            android:textSize="20sp"
-            android:text="Forgot Password?"
-            android:textColor="@color/black"
             android:layout_below="@+id/editTextPassword"
-
-            />
-
+            android:layout_alignEnd="@+id/editTextPassword"
+            android:layout_marginTop="10dp"
+            android:fontFamily="@font/montserrat"
+            android:text="Forgot Password?"
+            android:textColor="#393636"
+            android:textSize="10sp" />
 
     </RelativeLayout>
 
@@ -79,38 +99,56 @@
         android:id="@+id/btnGo"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="60dp"
-        android:layout_marginTop="50dp"
-        android:layout_marginRight="60dp"
+        android:layout_below="@+id/layoutContainer"
+        android:layout_marginHorizontal="60dp"
+        android:layout_marginTop="20dp"
         android:background="@drawable/background_go"
-        android:hint="Go"
+        android:backgroundTint="#e89f49"
+        android:fontFamily="@font/outfit"
+        android:text="Go"
         android:textColor="@color/white"
-        android:textSize="30dp"
-        android:textStyle="bold"
-        android:backgroundTint="#e89f49"/>
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:layout_marginTop="10dp"
         android:textSize="20sp"
-        android:text="Don't have account yet?"
-        android:textColor="@color/black"
-        />
+        android:textStyle="bold" />
 
-    <TextView
-        android:layout_width="wrap_content"
+    <LinearLayout
+        android:id="@+id/warningContainer"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:layout_marginTop="10dp"
-        android:textSize="20sp"
-        android:text="Sign up"
-        android:textColor="#ff8a9b"
-        />
+        android:layout_below="@id/btnGo"
+        android:layout_marginTop="40dp"
+        android:gravity="center">
 
+        <TextView
+            android:id="@+id/txtWarning"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:fontFamily="@font/montserrat"
+            android:text="Don't have account yet?  "
+            android:textColor="#393636"
+            android:textSize="12sp" />
 
+        <TextView
+            android:id="@+id/txtSignUp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignEnd="@+id/btnGo"
+            android:fontFamily="@font/montserrat"
+            android:gravity="center"
+            android:text="Sign up"
+            android:textColor="#ff8a9b"
+            android:textSize="12sp" />
 
-</LinearLayout>
+    </LinearLayout>
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/warningContainer"
+        android:layout_alignParentBottom="true"
+        android:scaleType="fitEnd"
+        android:src="@drawable/footer" />
+
+</RelativeLayout>
 
 
