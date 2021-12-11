@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#fbe9e7"
-    tools:context=".MainActivity">
+    tools:context=".activities.MainActivity">
 
     <ImageView
         android:id="@+id/imgLogo"
@@ -89,6 +89,7 @@
             android:layout_below="@+id/editTextPassword"
             android:layout_alignEnd="@+id/editTextPassword"
             android:layout_marginTop="10dp"
+            android:layout_marginRight="10dp"
             android:fontFamily="@font/montserrat"
             android:text="Forgot Password?"
             android:textColor="#393636"
@@ -97,11 +98,11 @@
     </RelativeLayout>
 
     <Button
-        android:id="@+id/btnGo"
+        android:id="@+id/btnSignUp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@+id/layoutContainer"
-        android:layout_marginHorizontal="60dp"
+        android:layout_marginHorizontal="80dp"
         android:layout_marginTop="20dp"
         android:background="@drawable/background_go"
         android:backgroundTint="#e89f49"
@@ -115,7 +116,7 @@
         android:id="@+id/warningContainer"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@id/btnGo"
+        android:layout_below="@id/btnSignUp"
         android:layout_marginTop="40dp"
         android:gravity="center">
 
@@ -133,7 +134,7 @@
             android:id="@+id/txtSignUp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_alignEnd="@+id/btnGo"
+            android:layout_alignEnd="@+id/btnSignUp"
             android:fontFamily="@font/montserrat"
             android:gravity="center"
             android:text="Sign up"

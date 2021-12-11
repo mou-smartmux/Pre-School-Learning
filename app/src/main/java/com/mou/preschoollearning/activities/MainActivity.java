@@ -1,8 +1,10 @@
-package com.mou.preschoollearning;
+package com.mou.preschoollearning.activities;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+
+import com.mou.preschoollearning.R;
 
 public class MainActivity extends AppCompatActivity {
 

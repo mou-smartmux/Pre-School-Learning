@@ -1,4 +1,4 @@
-package com.mou.preschoollearning.activites;
+package com.mou.preschoollearning.activities;
 
 import androidx.appcompat.app.AppCompatActivity;
 
