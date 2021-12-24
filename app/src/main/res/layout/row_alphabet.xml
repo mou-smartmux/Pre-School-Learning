@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ImageView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/imgAlphabet"
+    android:layout_width="match_parent"
+    android:layout_height="160dp"
+    android:fontFamily="@font/goblin_one"
+    android:src="@drawable/letter_a"
+    android:padding="16dp"
+    android:background="@drawable/shape_background"
+    android:layout_marginTop="4dp"/>

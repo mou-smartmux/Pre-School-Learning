@@ -30,12 +30,17 @@ public class LoginActivity extends AppCompatActivity {
     @BindView(R.id.layoutContainer)
     RelativeLayout layoutContainer;
 
-    @BindView(R.id.btnSignUp)
+    @BindView(R.id.btnGo)
     Button btnGo;
 
     @OnClick(R.id.txtSignUp)
     public void gotoSignUpActivity(){
         startActivity(new Intent(LoginActivity.this, SignUpActivity.class));
+    }
+
+    @OnClick(R.id.btnGo)
+    public void gotoMainActivity(){
+        startActivity(new Intent(LoginActivity.this, MainActivity.class));
     }
 
     @Override

@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#fbe9e7"
-    tools:context=".activities.AlphabetActivity">
+    tools:context=".activities.SignUpActivity">
 
     <ImageView
         android:id="@+id/imgLogo"
@@ -48,6 +48,7 @@
             android:src="@drawable/profile_icon" />
 
         <EditText
+            android:id="@+id/editTextName"
             android:layout_width="match_parent"
             android:layout_height="50dp"
             android:layout_alignBottom="@+id/proIcon"
@@ -83,22 +84,11 @@
             android:textSize="14sp"
             android:textStyle="bold" />
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/editTextPassword"
-            android:layout_alignEnd="@+id/editTextPassword"
-            android:layout_marginTop="10dp"
-            android:layout_marginRight="10dp"
-            android:fontFamily="@font/montserrat"
-            android:text="Forgot Password?"
-            android:textColor="#393636"
-            android:textSize="10sp" />
-
+         
     </RelativeLayout>
 
     <Button
-        android:id="@+id/btnGo"
+        android:id="@+id/btnSignUp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@+id/layoutContainer"
@@ -107,7 +97,7 @@
         android:background="@drawable/background_go"
         android:backgroundTint="#e89f49"
         android:fontFamily="@font/outfit"
-        android:text="Go"
+        android:text="Sign Up"
         android:textColor="@color/white"
         android:textSize="20sp"
         android:textStyle="bold" />
@@ -116,7 +106,7 @@
         android:id="@+id/warningContainer"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@id/btnGo"
+        android:layout_below="@id/btnSignUp"
         android:layout_marginTop="40dp"
         android:gravity="center">
 
@@ -126,18 +116,18 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:fontFamily="@font/montserrat"
-            android:text="Don't have account yet?  "
+            android:text="Already have an account?  "
             android:textColor="#393636"
             android:textSize="12sp" />
 
         <TextView
-            android:id="@+id/txtSignUp"
+            android:id="@+id/txtLogIn"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_height="match_parent"
             android:layout_alignEnd="@+id/btnSignUp"
             android:fontFamily="@font/montserrat"
             android:gravity="center"
-            android:text="Sign up"
+            android:text="Log In"
             android:textColor="#ff8a9b"
             android:textSize="12sp" />
 
@@ -152,5 +142,3 @@
         android:src="@drawable/footer" />
 
 </RelativeLayout>
-
-
