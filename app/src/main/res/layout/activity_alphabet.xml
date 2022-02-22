@@ -14,23 +14,20 @@
         <androidx.appcompat.widget.Toolbar
             android:id="@+id/toolbar"
             android:layout_width="match_parent"
-            android:layout_height="?attr/actionBarSize"
-            app:title="Words" />
+            android:layout_height="?attr/actionBarSize" />
 
     </com.google.android.material.appbar.AppBarLayout>
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:weightSum="2"
-        android:layout_marginTop="16dp">
+        android:weightSum="2">
 
         <LinearLayout
             android:layout_width="0dp"
             android:layout_height="match_parent"
-            android:layout_weight="1.3"
+            android:layout_weight="1.2"
             android:orientation="vertical"
-
             android:weightSum="3">
 
             <ImageView
@@ -38,16 +35,23 @@
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
                 android:layout_weight="1"
-                android:padding="24dp"
-                android:src="@drawable/letter_a" />
+                android:padding="32dp"
+                android:src="@drawable/alpha" />
 
             <com.airbnb.lottie.LottieAnimationView
                 android:id="@+id/lottieImage"
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
                 android:layout_weight="1"
-                android:padding="24dp"
                 app:lottie_loop="true" />
+
+            <ImageView
+                android:id="@+id/imgLottieAlternative"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:padding="24dp"
+                android:visibility="gone" />
 
             <TextView
                 android:id="@+id/txtDescription"
@@ -56,7 +60,7 @@
                 android:layout_weight="1"
                 android:fontFamily="@font/outfit"
                 android:gravity="center"
-                android:text="A for apple."
+                android:text="Let's \nMake \nWords"
                 android:textColor="@color/black"
                 android:textSize="32sp" />
 
@@ -66,9 +70,10 @@
             android:id="@+id/recyclerView"
             android:layout_width="0dp"
             android:layout_height="match_parent"
-            android:layout_weight=".7"
+            android:layout_weight=".8"
+            app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+            app:spanCount="2"
             tools:listitem="@layout/row_alphabet" />
 
     </LinearLayout>
-
 </LinearLayout>

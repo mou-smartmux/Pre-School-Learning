@@ -6,10 +6,20 @@
     android:layout_height="match_parent"
     tools:context=".activities.MainActivity">
 
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        app:title="Menu"
+        app:titleTextColor="#c2185b"
+        tools:layout_editor_absoluteX="32dp"
+        tools:layout_editor_absoluteY="-1dp"/>
+
     <GridLayout
         android:id="@+id/mainGrid"
         android:layout_width="match_parent"
-        android:layout_height="633dp"
+        android:layout_height="500dp"
         android:layout_weight="8"
         android:alignmentMode="alignMargins"
         android:columnCount="3"
@@ -20,6 +30,8 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
+
+
 
         <!-- Row 1 -->
 
@@ -39,7 +51,7 @@
 
             <LinearLayout
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_height="65dp"
                 android:layout_gravity="center_horizontal|center_vertical"
                 android:layout_margin="16dp"
                 android:orientation="vertical">
@@ -82,7 +94,7 @@
 
             <LinearLayout
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_height="65dp"
                 android:layout_gravity="center_horizontal|center_vertical"
                 android:layout_margin="16dp"
                 android:orientation="vertical">
@@ -124,7 +136,7 @@
 
             <LinearLayout
                 android:layout_width="wrap_content"
-                android:layout_height="67dp"
+                android:layout_height="65dp"
                 android:layout_gravity="center_horizontal|center_vertical"
                 android:layout_margin="16dp"
                 android:orientation="vertical">
@@ -133,12 +145,12 @@
                     android:layout_width="50dp"
                     android:layout_height="50dp"
                     android:layout_gravity="center_horizontal"
-                    android:src="@drawable/monthsnew" />
+                    android:src="@drawable/month" />
 
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="12Months"
+                    android:text="Months"
                     android:textAlignment="center"
                     android:textColor="@android:color/black"
                     android:textSize="10sp"
@@ -163,7 +175,7 @@
 
             <LinearLayout
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_height="65dp"
                 android:layout_gravity="center_horizontal|center_vertical"
                 android:layout_margin="16dp"
                 android:orientation="vertical">
@@ -177,7 +189,7 @@
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="7Days"
+                    android:text="Days"
                     android:textAlignment="center"
                     android:textColor="@android:color/black"
                     android:textSize="10sp"
@@ -205,7 +217,7 @@
 
             <LinearLayout
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_height="65dp"
                 android:layout_gravity="center_horizontal|center_vertical"
                 android:layout_margin="16dp"
                 android:orientation="vertical">
@@ -248,7 +260,7 @@
 
             <LinearLayout
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_height="65dp"
                 android:layout_gravity="center_horizontal|center_vertical"
                 android:layout_margin="16dp"
                 android:orientation="vertical">
@@ -286,7 +298,7 @@
 
             <LinearLayout
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_height="65dp"
                 android:layout_gravity="center_horizontal|center_vertical"
                 android:layout_margin="16dp"
                 android:orientation="vertical">
@@ -324,7 +336,7 @@
 
             <LinearLayout
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_height="65dp"
                 android:layout_gravity="center_horizontal|center_vertical"
                 android:layout_margin="16dp"
                 android:orientation="vertical">
@@ -362,7 +374,7 @@
 
             <LinearLayout
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_height="65dp"
                 android:layout_gravity="center_horizontal|center_vertical"
                 android:layout_margin="16dp"
                 android:orientation="vertical">
@@ -371,7 +383,7 @@
                     android:layout_width="53dp"
                     android:layout_height="50dp"
                     android:layout_gravity="center_horizontal"
-                    android:src="@drawable/animalnew" />
+                    android:src="@drawable/animal" />
 
                 <TextView
                     android:layout_width="match_parent"
@@ -400,7 +412,7 @@
 
             <LinearLayout
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_height="65dp"
                 android:layout_gravity="center_horizontal|center_vertical"
                 android:layout_margin="16dp"
                 android:orientation="vertical">
@@ -438,7 +450,7 @@
 
             <LinearLayout
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_height="65dp"
                 android:layout_gravity="center_horizontal|center_vertical"
                 android:layout_margin="16dp"
                 android:orientation="vertical">
@@ -476,7 +488,7 @@
 
             <LinearLayout
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_height="65dp"
                 android:layout_gravity="center_horizontal|center_vertical"
                 android:layout_margin="16dp"
                 android:orientation="vertical">
@@ -515,14 +527,15 @@
 
             <LinearLayout
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_height="65dp"
                 android:layout_gravity="center_horizontal|center_vertical"
                 android:layout_margin="16dp"
                 android:orientation="vertical">
-
                 <ImageView
                     android:layout_width="53dp"
                     android:layout_height="50dp"
+                    android:layout_row="0"
+                    android:layout_column="0"
                     android:layout_gravity="center_horizontal"
                     android:src="@drawable/educational_tools" />
 
@@ -554,7 +567,7 @@
 
             <LinearLayout
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_height="65dp"
                 android:layout_gravity="center_horizontal|center_vertical"
                 android:layout_margin="16dp"
                 android:orientation="vertical">
@@ -593,7 +606,7 @@
 
             <LinearLayout
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_height="65dp"
                 android:layout_gravity="center_horizontal|center_vertical"
                 android:layout_margin="16dp"
                 android:orientation="vertical">
@@ -616,6 +629,8 @@
             </LinearLayout>
 
         </androidx.cardview.widget.CardView>
+
+
 
 
     </GridLayout>

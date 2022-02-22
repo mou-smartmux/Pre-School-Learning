@@ -28,12 +28,11 @@ public class AlphabetAdapter extends RecyclerView.Adapter<AlphabetAdapter.ViewHo
         this.context = context;
         this.alphabets = alphabets;
     }
-
+    //interface
     public void setAlphabetClickListener(AlphabetClickListener alphabetClickListener) {
         this.alphabetClickListener = alphabetClickListener;
-    }
+}
 
-    @NonNull
     @Override
     public ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         View view = LayoutInflater.from(context).inflate(R.layout.row_alphabet, parent, false);

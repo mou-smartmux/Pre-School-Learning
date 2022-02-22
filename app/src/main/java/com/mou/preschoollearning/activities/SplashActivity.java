@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.animation.Animator;
 import android.content.Intent;
 import android.os.Bundle;
+import android.os.Handler;
 
 import com.airbnb.lottie.LottieAnimationView;
 import com.mou.preschoollearning.R;
@@ -22,6 +23,13 @@ public class SplashActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_splash);
         ButterKnife.bind(this);
+
+        new Handler().postDelayed(new Runnable() {
+            @Override
+            public void run() {
+                //
+            }
+        }, 3000);
 
         lottieAnimationView.addAnimatorListener(new Animator.AnimatorListener() {
             @Override
@@ -46,5 +54,5 @@ public class SplashActivity extends AppCompatActivity {
             }
         });
 
-    }
+   }
 }
