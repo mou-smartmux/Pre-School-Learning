@@ -3,7 +3,6 @@ package com.mou.preschoollearning.activities;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 import androidx.recyclerview.widget.GridLayoutManager;
-import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.content.SharedPreferences;
@@ -28,10 +27,7 @@ import java.util.Locale;
 import butterknife.BindView;
 import butterknife.ButterKnife;
 
-public class AlphabetActivity extends AppCompatActivity {
-
-    @BindView(R.id.toolbar)
-    Toolbar toolbar;
+public class WordActivity extends AppCompatActivity {
 
     @BindView(R.id.recyclerView)
     RecyclerView recyclerView;
@@ -51,28 +47,11 @@ public class AlphabetActivity extends AppCompatActivity {
     private AlphabetAdapter alphabetAdapter;
     private TextToSpeech textToSpeech;
 
-    private SharedPreferences sharedPreferences;
-    private SharedPreferences.Editor editor;
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_alphabet);
+        setContentView(R.layout.activity_word);
         ButterKnife.bind(this);
-
-        toolbar.setTitle("Words");
-
-        setSupportActionBar(toolbar);
-        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
-        toolbar.setNavigationOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                onBackPressed();
-            }
-        });
-
-        sharedPreferences = getSharedPreferences("MY_PREF", MODE_PRIVATE);
-        editor = sharedPreferences.edit();
 
         textToSpeech = new TextToSpeech(this, status -> {
             if (status != TextToSpeech.ERROR) {
@@ -122,174 +101,168 @@ public class AlphabetActivity extends AppCompatActivity {
                         imgLottieAlternative.setVisibility(View.GONE);
                         imgAlphabetImage.setImageResource(alphabets.get(position));
 
-                        //int key-alphabet-position = 11;
-                        editor.putInt("key-alphabet-position", position);
-                        editor.commit();
-
                         if (position == 0) {
                             lottieImage.setVisibility(View.VISIBLE);
                             txtDescription.setVisibility(View.VISIBLE);
                             txtDescription.setText("A for Apple");
-                            textToSpeech.speak("A for Apple", TextToSpeech.QUEUE_ADD, null);
+                            textToSpeech.speak(txtDescription.getText().toString(), TextToSpeech.QUEUE_ADD, null);
                             lottieImage.setAnimation("apple.json");
                             lottieImage.playAnimation();
                         } else if (position == 1) {
                             lottieImage.setVisibility(View.VISIBLE);
                             txtDescription.setVisibility(View.VISIBLE);
                             txtDescription.setText("B for Bee");
-                            textToSpeech.speak("B for Bee", TextToSpeech.QUEUE_ADD, null);
+                            textToSpeech.speak(txtDescription.getText().toString(), TextToSpeech.QUEUE_ADD, null);
                             lottieImage.setAnimation("bee.json");
                             lottieImage.playAnimation();
                         } else if (position == 2) {
                             lottieImage.setVisibility(View.VISIBLE);
                             txtDescription.setVisibility(View.VISIBLE);
                             txtDescription.setText("c for Cat");
-                            textToSpeech.speak("c for Cat", TextToSpeech.QUEUE_ADD, null);
+                            textToSpeech.speak(txtDescription.getText().toString(), TextToSpeech.QUEUE_ADD, null);
                             lottieImage.setAnimation("cat.json");
                             lottieImage.playAnimation();
                         } else if (position == 3) {
                             lottieImage.setVisibility(View.VISIBLE);
                             txtDescription.setVisibility(View.VISIBLE);
                             txtDescription.setText("D for Drum");
-                            textToSpeech.speak("D for Drum", TextToSpeech.QUEUE_ADD, null);
+                            textToSpeech.speak(txtDescription.getText().toString(), TextToSpeech.QUEUE_ADD, null);
                             lottieImage.setAnimation("drum.json");
                             lottieImage.playAnimation();
                         } else if (position == 4) {
                             lottieImage.setVisibility(View.VISIBLE);
                             txtDescription.setVisibility(View.VISIBLE);
                             txtDescription.setText("E for Egg");
-                            textToSpeech.speak("A for Apple", TextToSpeech.QUEUE_ADD, null);
+                            textToSpeech.speak(txtDescription.getText().toString(), TextToSpeech.QUEUE_ADD, null);
                             lottieImage.setAnimation("egg.json");
                             lottieImage.playAnimation();
                         } else if (position == 5) {
                             lottieImage.setVisibility(View.VISIBLE);
                             txtDescription.setVisibility(View.VISIBLE);
                             txtDescription.setText("F for Fish");
-                            textToSpeech.speak("A for Apple", TextToSpeech.QUEUE_ADD, null);
+                            textToSpeech.speak(txtDescription.getText().toString(), TextToSpeech.QUEUE_ADD, null);
                             lottieImage.setAnimation("fish.json");
                             lottieImage.playAnimation();
                         } else if (position == 6) {
                             lottieImage.setVisibility(View.GONE);
                             txtDescription.setVisibility(View.VISIBLE);
                             txtDescription.setText("G for Gloves");
+                            textToSpeech.speak(txtDescription.getText().toString(), TextToSpeech.QUEUE_ADD, null);
                             imgLottieAlternative.setVisibility(View.VISIBLE);
                             imgLottieAlternative.setImageResource(R.drawable.gloves);
                             txtDescription.setVisibility(View.VISIBLE);
-                            textToSpeech.speak("A for Apple", TextToSpeech.QUEUE_ADD, null);
-                            //lottieImage.setAnimation("gloves.json");
-                            //lottieImage.playAnimation();
                         } else if (position == 7) {
                             lottieImage.setVisibility(View.VISIBLE);
                             txtDescription.setVisibility(View.VISIBLE);
                             txtDescription.setText("H for House");
-                            textToSpeech.speak("A for Apple", TextToSpeech.QUEUE_ADD, null);
+                            textToSpeech.speak(txtDescription.getText().toString(), TextToSpeech.QUEUE_ADD, null);
                             lottieImage.setAnimation("house.json");
                             lottieImage.playAnimation();
                         } else if (position == 8) {
                             lottieImage.setVisibility(View.VISIBLE);
                             txtDescription.setVisibility(View.VISIBLE);
                             txtDescription.setText("I for Igloo");
-                            textToSpeech.speak("A for Apple", TextToSpeech.QUEUE_ADD, null);
+                            textToSpeech.speak(txtDescription.getText().toString(), TextToSpeech.QUEUE_ADD, null);
                             lottieImage.setAnimation("igloo.json");
                             lottieImage.playAnimation();
                         } else if (position == 9) {
                             lottieImage.setVisibility(View.VISIBLE);
                             txtDescription.setVisibility(View.VISIBLE);
                             txtDescription.setText("J for Jar");
-                            textToSpeech.speak("A for Apple", TextToSpeech.QUEUE_ADD, null);
+                            textToSpeech.speak(txtDescription.getText().toString(), TextToSpeech.QUEUE_ADD, null);
                             lottieImage.setAnimation("jar.json");
                             lottieImage.playAnimation();
                         } else if (position == 10) {
                             lottieImage.setVisibility(View.VISIBLE);
                             txtDescription.setVisibility(View.VISIBLE);
                             txtDescription.setText("K for Key");
-                            textToSpeech.speak("A for Apple", TextToSpeech.QUEUE_ADD, null);
+                            textToSpeech.speak(txtDescription.getText().toString(), TextToSpeech.QUEUE_ADD, null);
                             lottieImage.setAnimation("key.json");
                             lottieImage.playAnimation();
                         } else if (position == 11) {
                             lottieImage.setVisibility(View.VISIBLE);
                             txtDescription.setVisibility(View.VISIBLE);
                             txtDescription.setText("L for Lock");
-                            textToSpeech.speak("A for Apple", TextToSpeech.QUEUE_ADD, null);
+                            textToSpeech.speak(txtDescription.getText().toString(), TextToSpeech.QUEUE_ADD, null);
                             lottieImage.setAnimation("lock.json");
                             lottieImage.playAnimation();
                         } else if (position == 12) {
                             lottieImage.setVisibility(View.VISIBLE);
                             txtDescription.setVisibility(View.VISIBLE);
                             txtDescription.setText("M for Mug");
-                            textToSpeech.speak("A for Apple", TextToSpeech.QUEUE_ADD, null);
+                            textToSpeech.speak(txtDescription.getText().toString(), TextToSpeech.QUEUE_ADD, null);
                             lottieImage.setAnimation("mug.json");
                             lottieImage.playAnimation();
                         } else if (position == 13) {
                             lottieImage.setVisibility(View.GONE);
                             imgLottieAlternative.setVisibility(View.VISIBLE);
                             imgLottieAlternative.setImageResource(R.drawable.net);
-                            textToSpeech.speak("A for Apple", TextToSpeech.QUEUE_ADD, null);
                             txtDescription.setVisibility(View.VISIBLE);
                             txtDescription.setText("N for Drum");
+                            textToSpeech.speak(txtDescription.getText().toString(), TextToSpeech.QUEUE_ADD, null);
                             //lottieImage.setAnimation("drum.json");
                             //lottieImage.playAnimation();
                         } else if (position == 14) {
                             lottieImage.setVisibility(View.VISIBLE);
                             txtDescription.setVisibility(View.VISIBLE);
                             txtDescription.setText("O for Orange");
-                            textToSpeech.speak("A for Apple", TextToSpeech.QUEUE_ADD, null);
+                            textToSpeech.speak(txtDescription.getText().toString(), TextToSpeech.QUEUE_ADD, null);
                             lottieImage.setAnimation("orange.json");
                             lottieImage.playAnimation();
                         } else if (position == 15) {
                             lottieImage.setVisibility(View.VISIBLE);
                             txtDescription.setVisibility(View.VISIBLE);
                             txtDescription.setText("P for Pumpkin");
-                            textToSpeech.speak("A for Apple", TextToSpeech.QUEUE_ADD, null);
+                            textToSpeech.speak(txtDescription.getText().toString(), TextToSpeech.QUEUE_ADD, null);
                             lottieImage.setAnimation("pumpkin.json");
                             lottieImage.playAnimation();
                         } else if (position == 16) {
                             lottieImage.setVisibility(View.VISIBLE);
                             txtDescription.setVisibility(View.VISIBLE);
                             txtDescription.setText("Q for Queen");
-                            textToSpeech.speak("A for Apple", TextToSpeech.QUEUE_ADD, null);
+                            textToSpeech.speak(txtDescription.getText().toString(), TextToSpeech.QUEUE_ADD, null);
                             lottieImage.setAnimation("queen.json");
                             lottieImage.playAnimation();
                         } else if (position == 17) {
                             lottieImage.setVisibility(View.VISIBLE);
                             txtDescription.setVisibility(View.VISIBLE);
                             txtDescription.setText("R for Robot");
-                            textToSpeech.speak("A for Apple", TextToSpeech.QUEUE_ADD, null);
+                            textToSpeech.speak(txtDescription.getText().toString(), TextToSpeech.QUEUE_ADD, null);
                             lottieImage.setAnimation("robot.json");
                             lottieImage.playAnimation();
                         } else if (position == 18) {
                             lottieImage.setVisibility(View.VISIBLE);
                             txtDescription.setVisibility(View.VISIBLE);
                             txtDescription.setText("S for Snake");
-                            textToSpeech.speak("A for Apple", TextToSpeech.QUEUE_ADD, null);
+                            textToSpeech.speak(txtDescription.getText().toString(), TextToSpeech.QUEUE_ADD, null);
                             lottieImage.setAnimation("snake.json");
                             lottieImage.playAnimation();
                         } else if (position == 19) {
                             lottieImage.setVisibility(View.VISIBLE);
                             txtDescription.setVisibility(View.VISIBLE);
                             txtDescription.setText("T for Teapot");
-                            textToSpeech.speak("A for Apple", TextToSpeech.QUEUE_ADD, null);
+                            textToSpeech.speak(txtDescription.getText().toString(), TextToSpeech.QUEUE_ADD, null);
                             lottieImage.setAnimation("teapot.json");
                             lottieImage.playAnimation();
                         } else if (position == 20) {
                             lottieImage.setVisibility(View.VISIBLE);
                             txtDescription.setVisibility(View.VISIBLE);
                             txtDescription.setText("U for Umbrella");
-                            textToSpeech.speak("A for Apple", TextToSpeech.QUEUE_ADD, null);
+                            textToSpeech.speak(txtDescription.getText().toString(), TextToSpeech.QUEUE_ADD, null);
                             lottieImage.setAnimation("umbrella.json");
                             lottieImage.playAnimation();
                         } else if (position == 21) {
                             lottieImage.setVisibility(View.VISIBLE);
                             txtDescription.setVisibility(View.VISIBLE);
                             txtDescription.setText("V for Vase");
-                            textToSpeech.speak("A for Apple", TextToSpeech.QUEUE_ADD, null);
+                            textToSpeech.speak(txtDescription.getText().toString(), TextToSpeech.QUEUE_ADD, null);
                             lottieImage.setAnimation("vase.json");
                             lottieImage.playAnimation();
                         } else if (position == 22) {
                             lottieImage.setVisibility(View.VISIBLE);
                             txtDescription.setVisibility(View.VISIBLE);
                             txtDescription.setText("W for watch");
-                            textToSpeech.speak("A for Apple", TextToSpeech.QUEUE_ADD, null);
+                            textToSpeech.speak(txtDescription.getText().toString(), TextToSpeech.QUEUE_ADD, null);
                             lottieImage.setAnimation("watch.json");
                             lottieImage.playAnimation();
                         } else if (position == 23) {
@@ -298,7 +271,7 @@ public class AlphabetActivity extends AppCompatActivity {
                             imgLottieAlternative.setImageResource(R.drawable.xylophone);
                             txtDescription.setVisibility(View.VISIBLE);
                             txtDescription.setText("X for Xylophone");
-                            textToSpeech.speak("A for Apple", TextToSpeech.QUEUE_ADD, null);
+                            textToSpeech.speak(txtDescription.getText().toString(), TextToSpeech.QUEUE_ADD, null);
                             //lottieImage.setAnimation("drum.json");
                             //lottieImage.playAnimation();
                         } else if (position == 24) {
@@ -307,14 +280,14 @@ public class AlphabetActivity extends AppCompatActivity {
                             imgLottieAlternative.setImageResource(R.drawable.yoyo);
                             txtDescription.setVisibility(View.VISIBLE);
                             txtDescription.setText("Y for YoYo");
-                            textToSpeech.speak("A for Apple", TextToSpeech.QUEUE_ADD, null);
+                            textToSpeech.speak(txtDescription.getText().toString(), TextToSpeech.QUEUE_ADD, null);
                             //lottieImage.setAnimation("drum.json");
                             //lottieImage.playAnimation();
                         } else if (position == 25) {
                             lottieImage.setVisibility(View.VISIBLE);
                             txtDescription.setVisibility(View.VISIBLE);
                             txtDescription.setText("Z for Zip");
-                            textToSpeech.speak("Z for Zip", TextToSpeech.QUEUE_ADD, null);
+                            textToSpeech.speak(txtDescription.getText().toString(), TextToSpeech.QUEUE_ADD, null);
                             lottieImage.setAnimation("zip.json");
                             lottieImage.playAnimation();
                         } else {
@@ -335,12 +308,6 @@ public class AlphabetActivity extends AppCompatActivity {
         GridLayoutManager layoutManager = new GridLayoutManager(this, 2);
         recyclerView.setLayoutManager(layoutManager);
         recyclerView.setAdapter(alphabetAdapter);
-
-        int lastPosition = sharedPreferences.getInt("key-alphabet-position", -1);
-
-        if(lastPosition != -1){
-            layoutManager.scrollToPositionWithOffset(lastPosition, 0);
-        }
     }
 
     @Override

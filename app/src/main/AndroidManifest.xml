@@ -13,7 +13,6 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.PreSchoolLearning">
         <activity android:name=".activities.MainActivity"/>
-        <activity android:name=".activities.SignUpActivity" />
         <activity android:name=".activities.SplashActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -21,11 +20,7 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity
-            android:name=".activities.LoginActivity"
-            android:windowSoftInputMode="stateHidden|adjustResize" />
-        <activity android:name=".activities.CategoryActivity" />
-        <activity android:name=".activities.AlphabetActivity" />
+        <activity android:name=".activities.WordActivity" />
 
         <meta-data
             android:name="preloaded_fonts"

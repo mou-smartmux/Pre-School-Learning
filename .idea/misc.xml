@@ -5,9 +5,18 @@
       <map>
         <entry key="app/src/main/res/drawable/background_go.xml" value="0.2671794871794872" />
         <entry key="app/src/main/res/drawable/shape_round.xml" value="0.2671794871794872" />
+        <entry key="app/src/main/res/font/audiowide.xml" value="0.1609375" />
+        <entry key="app/src/main/res/font/goblin_one.xml" value="0.1609375" />
+        <entry key="app/src/main/res/font/montserrat.xml" value="0.1609375" />
         <entry key="app/src/main/res/font/montserrat_subrayada.xml" value="0.28102564102564104" />
+        <entry key="app/src/main/res/layout/activity_alphabet.xml" value="0.129981884057971" />
         <entry key="app/src/main/res/layout/activity_catagory.xml" value="0.2552083333333333" />
-        <entry key="app/src/main/res/layout/activity_login.xml" value="0.375" />
+        <entry key="app/src/main/res/layout/activity_login.xml" value="0.335" />
+        <entry key="app/src/main/res/layout/activity_main.xml" value="0.25" />
+        <entry key="app/src/main/res/layout/activity_sign_up.xml" value="0.18931159420289856" />
+        <entry key="app/src/main/res/layout/activity_splash.xml" value="0.18931159420289856" />
+        <entry key="app/src/main/res/layout/activity_word.xml" value="0.25" />
+        <entry key="app/src/main/res/layout/row_alphabet.xml" value="0.25" />
       </map>
     </option>
   </component>

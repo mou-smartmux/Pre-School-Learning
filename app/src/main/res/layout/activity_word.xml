@@ -5,19 +5,32 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".activities.AlphabetActivity">
+    tools:context=".activities.WordActivity">
 
-    <com.google.android.material.appbar.AppBarLayout
+    <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
-
-        <androidx.appcompat.widget.Toolbar
-            android:id="@+id/toolbar"
+        android:layout_height="@dimen/margin_64">
+        <TextView
+            android:id="@+id/title"
             android:layout_width="match_parent"
-            android:layout_height="?attr/actionBarSize" />
-
-    </com.google.android.material.appbar.AppBarLayout>
-
+            android:layout_height="63dp"
+            android:layout_centerInParent="true"
+            android:text="WORDS"
+            android:textAlignment="center"
+            android:gravity="center"
+            android:textColor="@color/black"
+            android:textSize="@dimen/txt_size_24"
+            android:fontFamily="@font/pacifico"
+            android:textStyle="bold" />
+        <View
+            android:layout_width="match_parent"
+            android:layout_height=".5dp"
+            android:layout_below="@+id/title"
+            android:layout_marginStart="@dimen/margin_8"
+            android:layout_marginEnd="@dimen/margin_8"
+            android:background="@color/black"
+            />
+    </RelativeLayout>
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -62,7 +75,7 @@
                 android:gravity="center"
                 android:text="Let's \nMake \nWords"
                 android:textColor="@color/black"
-                android:textSize="32sp" />
+                android:textSize="@dimen/txt_size_24" />
 
         </LinearLayout>
 
@@ -71,6 +84,8 @@
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight=".8"
+            android:layout_marginTop="@dimen/margin_4"
+            android:layout_marginBottom="@dimen/margin_4"
             app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
             app:spanCount="2"
             tools:listitem="@layout/row_alphabet" />
