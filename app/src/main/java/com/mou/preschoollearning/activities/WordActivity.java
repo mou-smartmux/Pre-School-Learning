@@ -198,7 +198,7 @@ public class WordActivity extends AppCompatActivity {
                             imgLottieAlternative.setVisibility(View.VISIBLE);
                             imgLottieAlternative.setImageResource(R.drawable.net);
                             txtDescription.setVisibility(View.VISIBLE);
-                            txtDescription.setText("N for Drum");
+                            txtDescription.setText("N for Net");
                             textToSpeech.speak(txtDescription.getText().toString(), TextToSpeech.QUEUE_ADD, null);
                             //lottieImage.setAnimation("drum.json");
                             //lottieImage.playAnimation();
@@ -261,7 +261,7 @@ public class WordActivity extends AppCompatActivity {
                         } else if (position == 22) {
                             lottieImage.setVisibility(View.VISIBLE);
                             txtDescription.setVisibility(View.VISIBLE);
-                            txtDescription.setText("W for watch");
+                            txtDescription.setText("W for Watch");
                             textToSpeech.speak(txtDescription.getText().toString(), TextToSpeech.QUEUE_ADD, null);
                             lottieImage.setAnimation("watch.json");
                             lottieImage.playAnimation();

@@ -10,17 +10,18 @@
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="@dimen/margin_64">
+
         <TextView
             android:id="@+id/title"
             android:layout_width="match_parent"
             android:layout_height="63dp"
             android:layout_centerInParent="true"
+            android:fontFamily="@font/pacifico"
+            android:gravity="center"
             android:text="WORDS"
             android:textAlignment="center"
-            android:gravity="center"
             android:textColor="@color/black"
             android:textSize="@dimen/txt_size_24"
-            android:fontFamily="@font/pacifico"
             android:textStyle="bold" />
         <View
             android:layout_width="match_parent"

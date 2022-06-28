@@ -1,16 +1,15 @@
 package com.mou.preschoollearning.adapters;
 
+import android.annotation.SuppressLint;
 import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
-import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.google.firebase.database.annotations.NotNull;
 import com.mou.preschoollearning.R;
 
 import java.util.List;
@@ -39,8 +38,9 @@ public class AlphabetAdapter extends RecyclerView.Adapter<AlphabetAdapter.ViewHo
         return new ViewHolder(view);
     }
 
+    @SuppressLint("RecyclerView")
     @Override
-    public void onBindViewHolder(@NonNull AlphabetAdapter.ViewHolder holder, int position) {
+    public void onBindViewHolder(AlphabetAdapter.ViewHolder holder, int position) {
         holder.imgAlphabet.setImageResource(alphabets.get(position));
         holder.imgAlphabet.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -75,7 +75,7 @@ public class AlphabetAdapter extends RecyclerView.Adapter<AlphabetAdapter.ViewHo
         @BindView(R.id.imgAlphabet)
         ImageView imgAlphabet;
 
-        public ViewHolder(@NotNull View itemView) {
+        public ViewHolder(View itemView) {
             super(itemView);
             ButterKnife.bind(this, itemView);
         }

@@ -1,6 +1,6 @@
 plugins {
     id 'com.android.application'
-    id 'com.google.gms.google-services'
+//    id 'com.google.gms.google-services'
 }
 
 android {
@@ -8,7 +8,7 @@ android {
     buildToolsVersion "30.0.3"
 
     defaultConfig {
-        applicationId "com.mou.pre_school_learning"
+        applicationId "com.mou.psl.words"
         minSdkVersion 23
         targetSdkVersion 30
         versionCode 1
@@ -50,10 +50,10 @@ dependencies {
     implementation 'com.airbnb.android:lottie:4.2.2'
 
     //Firebase
-    implementation platform('com.google.firebase:firebase-bom:29.0.1')
+//    implementation platform('com.google.firebase:firebase-bom:29.0.1')
 
     // Declare the dependency for the Realtime Database library
     // When using the BoM, you don't specify versions in Firebase library dependencies
-    implementation 'com.google.firebase:firebase-database'
-    implementation 'com.google.firebase:firebase-auth:21.0.1'
+//    implementation 'com.google.firebase:firebase-database'
+//    implementation 'com.google.firebase:firebase-auth:21.0.1'
 }
